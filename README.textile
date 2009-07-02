@@ -1,0 +1,81 @@
+h1. loopedCarousel 0.5 - jQuery plugin
+
+loopedCarousel is a plugin made for jQuery that is not only a looping carousel, its main goal is to be extremely easy to implement. No more messing around with CSS to get your carousel to look and function properly. You want to show 5 items? Tell it "items: 5". You want some spacing in between those items? Just tell it "spacing: 15". You want it to be vertical? Tell it "vertical: true". Damn thing even auto generates pagination for you based on how many total items you have and how many items you're showing. Keep it simple!
+
+h2. Info
+
+Developed by "Nathan Searles":mailto:nsearles@gmail.com, "http://nathansearles.com":http://nathansearles.com
+
+For updates, follow Nathan Searles on "Twitter":http://twitter.com/nathansearles
+
+h2. Examples
+
+* "Simple example":http://nathansearles.com/loopedcarousel/example-1.html
+* "Styled news example":http://nathansearles.com/loopedcarousel/example-2.html
+* "Vertical carousel":http://nathansearles.com/loopedcarousel/example-3.html
+* "Multiple carousels":http://nathansearles.com/loopedcarousel/example-4.html
+
+h2. Markup
+
+<pre>	 
+<div id="loopedCarousel">	
+	<div class="container">
+		<div class="slides">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>10</div>
+			<div>11</div>
+			<div>12</div>
+			<div>13</div>
+			<div>14</div>
+			<div>15</div>
+		</div>
+	</div>
+	<a href="#" class="previous">previous</a>
+	<a href="#" class="next">next</a>	
+</div>
+</pre>
+
+h2. CSS
+
+<pre>
+.container {height:180px; overflow:hidden; position:relative; background:#fff; border:1px solid #9e9e9e;}
+.slides {position:absolute; top:10px; left:0;}
+.slides div {position:absolute; top:0; width:160px; height:160px; display:none; text-align:center; background-color:#d8d8d8; border:1px solid #ccc;}
+</pre>
+
+h2. Initialize
+
+<pre>
+<script type="text/javascript" charset="utf-8">
+	$(function(){
+		$('#loopedCarousel').loopedCarousel();
+	});
+</script>
+</pre>
+
+h2. Options
+
+<pre>
+container: '.container', // Class or ID of main container
+slides: '.slides', // Class or ID of slide container
+pagination: '.pagination', // Class or ID of pagination container
+autoStart: 0, // Set to positive number for auto start and interval time
+slidespeed: 300, // Speed of slide animation
+fadespeed: 300, // Speed of fade animation
+items: 3, // Items shown
+padding: 10, // Padding between items
+showPagination: true, // Shows pagination links
+vertical: false // Set to true for vertical carousel
+</pre>
+
+h2. Changelog
+
+* 0.5 - Initial release

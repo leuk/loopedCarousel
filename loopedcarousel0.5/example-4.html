@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>loopedCarousel jQuery Plugin</title>
+	
+	<script src="jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="loopedcarousel.js" type="text/javascript" charset="utf-8"></script>
+	
+	<style type="text/css" media="screen">	
+		/*
+		 * Required 
+		*/
+		.container { height:180px; overflow:hidden;	 position:relative; background:#fff; border:1px solid #9e9e9e; }
+		.slides { position:absolute; top:10px; left:0; }
+		.slides div { position:absolute; top:0; width:160px; height:160px; display:none; text-align:center; background-color:#d8d8d8; border:1px solid #ccc; }
+		/*
+		 * Optional
+		*/
+		body { background:#aaa; color:#444; }
+		#loopedCarousel, #loopedCarousel-two { margin:0 auto; padding:10px 0; position:relative; clear:both; }
+		ul.pagination { list-style:none; padding:0; margin:0; }
+		ul.pagination li  { float:left; }
+		ul.pagination li a { padding:2px 4px; }
+		ul.pagination li.active a { background:blue; color:white; }
+	</style>
+</head>
+
+<body>
+<div id="loopedCarousel">
+	<div class="container">
+		<div class="slides">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>10</div>
+			<div>11</div>
+			<div>12</div>
+			<div>13</div>
+			<div>14</div>
+			<div>15</div>
+			<div>16</div>
+			<div>17</div>
+		</div>
+	</div>
+	<a href="#" class="previous">previous</a>
+	<a href="#" class="next">next</a>	
+</div>
+<div id="loopedCarousel-two">	
+	<div class="container">
+		<div class="slides">
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div>10</div>
+			<div>11</div>
+			<div>12</div>
+			<div>13</div>
+			<div>14</div>
+			<div>15</div>
+			<div>16</div>
+			<div>17</div>
+			<div>18</div>
+			<div>19</div>
+			<div>20</div>
+		</div>
+	</div>
+	<a href="#" class="previous">previous</a>
+	<a href="#" class="next">next</a>	
+</div>
+<script type="text/javascript" charset="utf-8">
+	$(function(){
+		$('#loopedCarousel').loopedCarousel();
+		$('#loopedCarousel-two').loopedCarousel({
+			items: 5
+		});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>loopedCarousel jQuery Plugin</title>
+	
+	<script src="jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="loopedcarousel.js" type="text/javascript" charset="utf-8"></script>
+	
+	<style type="text/css" media="screen">
+		/* 
+			Resets defualt browser settings
+			reset.css
+		*/
+		html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+		body { line-height: 1; }
+		ol, ul { list-style: none; }
+		blockquote, q { quotes: none; }
+		:focus { outline: 0; }
+		ins { text-decoration: none; }
+		del { text-decoration: line-through; }
+		table { border-collapse: collapse; border-spacing: 0; }
+		/*
+		 * Required 
+		*/
+		.container { height:99px; overflow:hidden; position:relative; background-color:#f2f2f2; padding:8px 0; border-top:1px solid #dadada;  border-bottom:1px solid #dadada; }
+		.slides { position:absolute; top:8px; left:0; }
+		.slides div { position:absolute; top:0; width:85px; height:91px; padding:4px 6px; display:none; background-color:#fff; border:1px solid #d8d8d8; }
+		/*
+		 * Optional
+		*/
+		body { background:#dadada; font:normal 12px/18px Arial, sans-serif; color:#222; }
+		#container { background:#fff; -moz-border-radius:5px; -webkit-border-radius:5px; margin:18px auto; position:relative; padding:12px 0; width:363px; text-align:left;  }
+		#loopedCarousel { margin:0 auto; width:327px;  position:relative; clear:both;  border:1px solid #dadada; -moz-border-radius:5px; -webkit-border-radius:5px; padding:17px 0 0;}
+		ul.pagination { list-style-type:none;  position:absolute; top:24px; right:44px; }
+		ul.pagination li { float:left; margin:0 2px; }	
+		ul.pagination a { display:block; width:7px; padding-top:7px; text-indent:-999999px; height:0; overflow:hidden; background-image:url(img/pagination.png); background-position:0 0; background-repeat:no-repeat;}
+		ul.pagination li.active a {background-position:0 -7px}
+		a.previous { position:absolute; top:14px; right:117px; display:block; width:26px; padding-top:26px; height:0; overflow:hidden; background-image:url(img/arrows.png); background-position:0 0; background-repeat:no-repeat;}
+		a.previous:hover { background-position:0 -26px }
+		a.next { position:absolute; top:14px; right:10px; display:block; width:26px; padding-top:26px; height:0; overflow:hidden; background-image:url(img/arrows.png); background-position:-26px 0; background-repeat:no-repeat;}
+		a.next:hover { background-position:-26px -26px }	
+		#top { height:34px; padding:0 10px; font-size:22px; }
+		h3 a:link, h3 a:visited { text-decoration:none; color:#222; }
+		h3 a:hover, h3 a:active { text-decoration:none; color:#ca0002; }
+		#bottom { padding:10px; }	
+		p.caption { font-size:10px; line-height:12px; font-weight:bold; margin-top:4px; }
+		small { font-size:9px; color:#888; font-weight:normal;}
+	</style>
+</head>
+
+<body>
+<div id="container">
+	<div id="loopedCarousel">
+		<div id="top">
+			<h3><a href="#">Video &raquo;</a></h3>
+			<a href="#" class="previous">previous</a>
+			<a href="#" class="next">next</a>
+		</div>
+		<div class="container">
+			<div class="slides">
+				<div>
+					<img src="img/video-tn-01.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+				<div>
+					<img src="img/video-tn-02.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+				<div>
+					<img src="img/video-tn-03.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+				<div>
+					<img src="img/video-tn-04.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+				<div>
+					<img src="img/video-tn-05.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+				<div>
+					<img src="img/video-tn-06.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+				<div>
+					<img src="img/video-tn-07.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+				<div>
+					<img src="img/video-tn-08.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+				<div>
+					<img src="img/video-tn-09.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+				<div>
+					<img src="img/video-tn-10.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+				<div>
+					<img src="img/video-tn-11.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+				<div>
+					<img src="img/video-tn-12.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+				<div>
+					<img src="img/video-tn-13.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+				<div>
+					<img src="img/video-tn-14.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+				<div>
+					<img src="img/video-tn-15.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+				<div>
+					<img src="img/video-tn-16.png" width="85" height="50" alt="Video" />
+					<p class="caption">Lorem ipsum dolor <small>1:24</small></p>
+				</div>
+			</div>
+		</div>
+		<div id="bottom">
+			<p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</strong></p>
+		</div>	
+	</div>
+</div>
+<script type="text/javascript" charset="utf-8">
+	$(function(){
+		$('#loopedCarousel').loopedCarousel({
+			spacing: 14
+		});
+	});
+</script>
+</body>
+</html>
